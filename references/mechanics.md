@@ -12,4 +12,3 @@ Each file in `engine/scenes/` is a complete working scene with one extra mechani
 
 Shared by all: `Figure` rig + `Track` keyframes, `simFall`, `spaced()` text, lime rings, squash, composite (navy screen, vignette, grain), bloom.
 
-Sound effects in `sfx/`: fail, pop, click, whoosh, win, check, like, strike, bell, confetti, counter, card. Gain 0.25–0.3. `win` always at 12.6.

@@ -12,7 +12,7 @@ cp "$SCENE" "$NEW/styles/neuron/scene.js"
 echo '{"duration": 15.0, "fps": 30, "lines": [], "words": []}' > "$NEW/audio/words.json"
 cat > "$NEW/sound.json" <<J
 { "sfxDir": "$SKILL/sfx", "music": { "src": "$NEW/audio/music.mp3", "gain": 1.0, "start": 0 },
-  "sfx": [ { "at": 12.6, "sfx": "win", "gain": 0.3 } ] }
+  "sfx": [] }
 J
 echo '{"style": "neuron", "dark": true, "t": 13.0, "shiftY": 0, "zoom": 1.08, "title": [["СЛОВО", "lime"], ["вопрос?"]]}' > "$NEW/cover.json"
 cp "$SKILL/references/brief-template.md" "$NEW/BRIEF.md"

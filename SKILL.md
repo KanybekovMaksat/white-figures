@@ -45,7 +45,7 @@ $SKILL/scripts/scaffold.sh <NN-slug> <scene>
 node $SKILL/tools/music.mjs episodes/<NN-slug> 15 "<mood>, 15 seconds, … peak at 12.5 seconds, then rings out. For a short wordless parable video."
 ```
 
-Fill `episodes/<NN-slug>/BRIEF.md` (the template is already there) and the title in `cover.json`. Music: instrumental, the mood follows the story arc (cold → warm, fragile → hopeful), a different instrument palette from the neighbouring episodes; two requests at a time at most.
+Fill `episodes/<NN-slug>/BRIEF.md` (the template is already there) and the title in `cover.json`. Sound is one piece of music and nothing else: [`references/sound.md`](references/sound.md) has the prompt recipe and the Instagram track to recommend. Two music requests at a time at most.
 
 Done when: BRIEF.md has no «…» left and `audio/music.mp3` exists.
 
@@ -61,13 +61,12 @@ Rewrite the choreography in `episodes/<NN-slug>/styles/neuron/scene.js`; rendere
    - lime only on the winning side, red only as a mistake mark.
 2. `node render.mjs video` (450 frames, ~3–5 min).
 3. Write `out/cover-frame.txt`: the second of the strongest frame between the payoff and 13.5 s (before the end card).
-4. Fill `sound.json` with the real moments from the choreography: falls → `fail`, placements or jumps → `pop`, fast moves → `whoosh`, payoff → `win` at 12.6.
 
 Done when: the video is rendered from the last version of scene.js and every still check passes.
 
 ## 4. Description
 
-Write `Готовые рилсы/<NN Название> — описание.txt` by [`references/description.md`](references/description.md).
+Write the description by [`references/description.md`](references/description.md) into `episodes/<NN-slug>/description.txt`, and show every description in full in the final chat reply.
 
 ## 5. Finish and check
 
@@ -81,4 +80,4 @@ It builds the sheet, assembles sound, makes the cover and copies everything into
 - the cover title covers neither figure's head nor the moral; if `cover.mjs` prints «outside the 3:4 grid», add `"size": 112` to cover.json (or shorten the title);
 - loudness printed by assemble is −14…−17 LUFS with the peak below −1.5 dB.
 
-Report to the user visual-first: the strip of covers, a table «№ / притча / мораль», where the descriptions are, and every flaw you saw on the sheets, stated plainly, including that the motion was checked on frames and wants one viewing with sound on a phone.
+Report to the user visual-first: the strip of covers, a table «№ / притча / мораль / трек из Instagram», the full descriptions, and every flaw you saw on the sheets, stated plainly, including that the motion was checked on frames and wants one viewing with sound on a phone.

@@ -13,5 +13,5 @@ node "$SKILL/tools/assemble.mjs" "episodes/$1" neuron
 node "$SKILL/tools/cover.mjs" "episodes/$1"
 cp "$E/out/$1-neuron.mp4" "$READY/$2.mp4"
 cp "$E/out/cover.png" "$READY/$2 — обложка.png"
-[ -f "$READY/$2 — описание.txt" ] || echo "MISSING: $READY/$2 — описание.txt"
+[ -f "$E/description.txt" ] || echo "MISSING: $E/description.txt"
 echo "sheet: $O/sheet.jpg   cover: $E/out/cover.png   ← LOOK at both"
